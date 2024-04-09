@@ -5,8 +5,9 @@ import numpy as np
 import glob
 import os
 from tqdm import tqdm
-from read_write_model import write_images_text, write_cameras_text, Image, Camera, rotmat2qvec
-
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from utils.read_write_model import write_images_text, write_cameras_text, Image, Camera, rotmat2qvec
 
 def get_parser():
     parser = argparse.ArgumentParser()

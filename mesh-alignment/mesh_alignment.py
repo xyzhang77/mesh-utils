@@ -2,7 +2,11 @@ import trimesh
 import numpy as np
 import argparse
 import os
-from read_write_model import qvec2rotmat
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+print(sys.path)
+
+from utils.read_write_model import qvec2rotmat
 
 def get_parser():
     parser = argparse.ArgumentParser()

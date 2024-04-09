@@ -1,8 +1,6 @@
 import copy
 import logging
-import sys
 
-import evo.core.lie_algebra as lie
 import evo.core.transformations as tr
 from evo.tools import plot, file_interface, log
 
@@ -26,8 +24,8 @@ if __name__ == "__main__":
     args = get_parser()
     logger = logging.getLogger("evo")
     log.configure_logging(verbose=True)
-    traj_ref = file_interface.read_kitti_poses_file(args.est)
-    traj_est = file_interface.read_kitti_poses_file(args.ref)
+    traj_ref = file_interface.read_kitti_poses_file(args.ref)
+    traj_est = file_interface.read_kitti_poses_file(args.est)
 
     logger.info("\nUmeyama alignment with scaling")
     traj_est_aligned_scaled = copy.deepcopy(traj_est)
@@ -59,4 +57,5 @@ if __name__ == "__main__":
 
         fig.tight_layout()
         plt.show()
-        plt.savefig(os.path.join(args.output, 'alignment_result.png'))
+        
+        fig.savefig(os.path.join(args.output, 'alignment_result.png'))

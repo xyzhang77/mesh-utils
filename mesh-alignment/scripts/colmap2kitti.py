@@ -1,7 +1,9 @@
 import argparse
 import os
 import numpy as np
-from read_write_model import read_images_text, qvec2rotmat
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from utils.read_write_model import read_images_text, qvec2rotmat
 
 
 def get_parser():
