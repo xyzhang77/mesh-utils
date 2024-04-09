@@ -10,3 +10,4 @@ python eval.py --input /path/to/predicted_mesh.ply --gt /path/to/gt.ply [-f] [-s
 
 If `-f` is provided, it will filter predicted mesh with gt mesh bbox.
 If `-s` is provided, it will save the intermediate results.
+
